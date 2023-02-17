@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { styles } from "./appStyles";
+import Footer from "./src/components/footer/Footer";
+import Edit from "./src/pages/edit/Edit";
+import Home from "./src/pages/homepage/Home";
+import Note from "./src/pages/note/Note";
+import Write from "./src/pages/writeNote/Write";
 
-export default function App() {
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <StatusBar style="light" />
+      {/* <Home /> */}
+      {/* <Write /> */}
+      {/* <Edit /> */}
+      <Note />
+      <Footer />
+    </>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
